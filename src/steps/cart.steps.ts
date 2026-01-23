@@ -24,6 +24,7 @@ When('I add the following items to the cart:', async function(this: CustomWorld,
     await productsPage.addItemToCart(row.item);
   }
   await productsPage.goToCart();
+  await productsPage.clickCheckout();
 });
 
 When('I proceed to checkout with:', async function(this: CustomWorld, dataTable) {

@@ -15,4 +15,8 @@ export class ProductsPage {
   async goToCart() {
     await this.page.click('.shopping_cart_link');
   }
+
+  async clickCheckout() {
+    await this.page.click('#checkout');
+  }
 }
