@@ -1,6 +1,6 @@
 Feature: SauceDemo Login
 
-  Scenario: User logs in with valid or invalid credentials
+  Scenario Outline: User logs in with valid or invalid credentials
     Given I open the browser
     When I navigate to "https://www.saucedemo.com/"
     And I login with username "<username>" and password "<password>"
