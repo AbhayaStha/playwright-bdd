@@ -5,6 +5,7 @@ import { LoginPage } from "../pages/LoginPage";
 import { ProductsPage } from "../pages/ProductsPage";
 
 Given("I open the browser", async function (this: CustomWorld) {
+  await this.launchBrowser();
   this.loginPage = new LoginPage(this.page);
 });
 

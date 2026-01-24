@@ -16,6 +16,8 @@ Given('I am logged in with username {string} and password {string}', async funct
 
   await loginPage.navigate('https://www.saucedemo.com/');
   await loginPage.login(username, password);
+
+  this.productsPage = new ProductsPage(this.page);
 });
 
 When('I add the following items to the cart:', async function(this: CustomWorld, dataTable) {

@@ -19,4 +19,18 @@ export class ProductsPage {
   async clickCheckout() {
     await this.page.click('#checkout');
   }
+  
+  async sortItems(option: string) {
+    await this.page.selectOption('.product_sort_container', { label: option });
+  }
+
+  async getAllProductNames(): Promise<string[]> {
+    return await this.page.$$eval('.inventory_item_name', els => els.map(el => el.textContent?.trim() || ''));
+  }
+
+  async getAllProductPrices(): Promise<number[]> {
+    return await this.page.$$eval('.inventory_item_price', els =>
+      els.map(el => parseFloat(el.textContent?.replace('$', '') || '0'))
+    );
+  }
 }
