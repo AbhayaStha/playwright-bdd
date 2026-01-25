@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "cucumber-js --require-module ts-node/register --require src/steps/**/*.ts --require src/support/**/*.ts"
-  },
+"scripts": {
+  "test": "cucumber-js --require-module ts-node/register --require src/steps/**/*.ts --require src/support/**/*.ts --format json:reports/cucumber-report.json"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
