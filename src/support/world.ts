@@ -3,6 +3,7 @@ import { Browser, BrowserContext, Page, chromium } from "@playwright/test";
 import { LoginPage } from "../pages/LoginPage";
 import { ProductsPage } from "../pages/ProductsPage";
 import { CheckoutPage } from "../pages/CheckoutPage";
+import { CheckoutOverviewPage } from "../pages/checkoutOverviewPage";
 
 
 
@@ -15,9 +16,10 @@ export class CustomWorld extends World {
   loginPage!: LoginPage;
   productsPage!: ProductsPage;
   checkoutPage!: CheckoutPage;
+  checkoutOverviewPage!: CheckoutOverviewPage;
 
   async launchBrowser() {
-    this.browser = await chromium.launch({ headless: true });
+    this.browser = await chromium.launch({ headless: false });
     this.context = await this.browser.newContext();
     this.page = await this.context.newPage();
   }
