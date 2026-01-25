@@ -12,7 +12,6 @@ This repository contains a **Playwright BDD (Cucumber) test automation framework
 - [Installation](#installation)  
 - [Running Tests](#running-tests)  
 - [Reports](#reports)  
-- [Folder Structure](#folder-structure)  
 - [Author](#author)  
 
 ---
@@ -48,5 +47,52 @@ This project automates **SauceDemo e-commerce flows** using **Playwright** and *
 - **BDD:** Cucumber  
 - **Reporting:** cucumber-html-reporter  
 - **Assertions:** Playwright Test + Expect  
-- **Version Control:** Git / GitHub  
+- **Version Control:** Git / GitHub
 
+
+## **Installation**
+
+1. Clone the repository:
+```bash
+git clone https://github.com//playwright-bdd-saucedemo.git
+cd playwright-bdd-saucedemo
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+## **Running Tests**
+
+### Run all tests
+```bash
+npm test
+```
+
+### Run a specific feature file
+```bash
+npm test -- features/verify_checkout.feature
+```
+
+## **Reports**
+
+After running tests, a JSON report will be generated at:
+```
+reports/cucumber-report.json
+```
+
+### Generate HTML Report
+
+You can generate an HTML report using cucumber-html-reporter:
+```bash
+node generate-report.js
+```
+
+The HTML report will be available at:
+```
+reports/cucumber-report.html
+```
+
+## **Author**
+ Abhaya Shrestha
