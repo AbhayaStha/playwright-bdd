@@ -1,4 +1,4 @@
-Feature: Add multiple items to cart and verify checkout
+Feature: SauceDemo End-to-End Purchase Flow
 
   Scenario: Add items and complete checkout successfully
     Given I am logged in with username "standard_user" and password "secret_sauce"
