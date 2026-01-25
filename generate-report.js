@@ -8,9 +8,10 @@ const options = {
   reportSuiteAsScenarios: true,
   launchReport: true,
   metadata: {
+    "Tested By": "Abhaya Shrestha",
     "Test Environment": "Playwright + TypeScript",
     "Platform": process.platform,
-    "Executed": "Local"
+    "Executed": new Date().toLocaleString()
   }
 };
 
